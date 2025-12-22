@@ -1,0 +1,4 @@
+console.log('Genuary 11');
+
+// Quine. A Quine is a form of code poetry, it’s a computer program that outputs exactly its own source code.
+

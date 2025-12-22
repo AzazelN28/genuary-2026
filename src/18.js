@@ -1,0 +1,5 @@
+console.log('Genuary 18');
+
+// Unexpected path. Draw a route that changes direction based on one very simple rule.
+
+
