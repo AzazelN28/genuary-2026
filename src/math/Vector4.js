@@ -26,12 +26,75 @@ export class Vector4 {
     return this
   }
 
-  toFixed(fractionDigits = 0) {
+  copy({ x, y, z, w }) {
+    return this.set(x, y, z, w)
+  }
 
+  clone() {
+    return new Vector4(this.x, this.y, this.z, this.w)
+  }
+
+  add({ x, y, z, w }, all) {
+    return this.set(
+      this.x + x,
+      this.y + y,
+      this.z + z,
+      all ? this.w + w : this.w
+    )
+  }
+
+  subtract({ x, y, z, w }, all) {
+    return this.set(
+      this.x - x,
+      this.y - y,
+      this.z - z,
+      all ? this.w - w : this.w
+    )
+  }
+
+  multiply({ x, y, z, w }, all) {
+    return this.set(
+      this.x * x,
+      this.y * y,
+      this.z * z,
+      all ? this.w * w : this.w
+    )
+  }
+
+  divide({ x, y, z, w }, all) {
+    return this.set(
+      this.x / x,
+      this.y / y,
+      this.z / z,
+      all ? this.w / w : this.w
+    )
+  }
+
+  normalize(all) {
+    const l = this.length
+    return this.set(
+      this.x / l,
+      this.y / l,
+      this.z / l,
+      all ? this.w / l : this.w
+    )
+  }
+
+  negate(all) {
+    return this.set(
+      -this.x,
+      -this.y,
+      -this.z,
+      all ? -this.w : this.w
+    )
+  }
+
+  toFixed(fractionDigits = 0) {
+    return `Vector4(${this.x.toFixed(fractionDigits)}, ${this.y.toFixed(fractionDigits)}, ${this.z.toFixed(fractionDigits)}, ${this.w.toFixed(fractionDigits)})`
   }
 
   toString() {
-
+    return `Vector4(${this.x}, ${this.y}, ${this.z}, ${this.w})`
   }
 }
 

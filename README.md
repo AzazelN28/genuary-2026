@@ -8,6 +8,8 @@ https://genuary.art/prompts
 
 One color, one shape.
 
+![01](public/01.png)
+
 ### JAN. 2 (credit: Anna Lucia)
 
 [Twelve principles of animation](https://en.wikipedia.org/wiki/Twelve_basic_principles_of_animation).
